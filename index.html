@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的 個人作品集</title>
+  <title>吳國鋒 | 個人作品集</title>
   <style>
     /* 全局樣式設定 */
     body {
@@ -37,31 +37,71 @@
     .container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 3rem 1rem;
+      padding: 2rem 1rem 4rem 1rem;
     }
 
-    /* 區塊標題 */
-    section h2 {
-      text-align: center;
-      color: #2d3748;
-      margin-bottom: 2rem;
-      position: relative;
+    /* ==========================================
+       🆕 切換標籤選單樣式 (Tabs Menu)
+       ========================================== */
+    .tab-menu {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
     }
-    section h2::after {
+    .tab-btn {
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #718096;
+      padding: 0.5rem 1.5rem;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .tab-btn:hover {
+      color: #4c51bf;
+    }
+    /* 當前選中的標籤樣式 */
+    .tab-btn.active {
+      color: #4c51bf;
+    }
+    .tab-btn.active::after {
       content: '';
-      display: block;
-      width: 50px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
       height: 3px;
       background-color: #4c51bf;
-      margin: 10px auto 0;
     }
 
-    /* 作品集網格佈局 */
+    /* ==========================================
+       🆕 內容區塊顯示控制 (Content Control)
+       ========================================== */
+    .tab-content {
+      display: none; /* 預設全部隱藏 */
+      animation: fadeIn 0.5s ease;
+    }
+    .tab-content.active {
+      display: block; /* 只有 active 的會顯示 */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==========================================
+       作品集網格佈局
+       ========================================== */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 1rem;
     }
 
     /* 單個作品卡片樣式 */
@@ -121,6 +161,45 @@
       text-decoration: underline;
     }
 
+    /* ==========================================
+       🆕 個人經歷樣式 (Timeline / Experience)
+       ========================================== */
+    .timeline {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 2rem;
+      border-left: 3px solid #e2e8f0;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: calc(-2rem - 8px);
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #4c51bf;
+      border: 3px solid #fff;
+    }
+    .time {
+      font-size: 0.9rem;
+      color: #718096;
+      font-weight: bold;
+    }
+    .timeline-content h3 {
+      margin: 0.2rem 0 0.5rem 0;
+      color: #2d3748;
+    }
+    .timeline-content p {
+      margin: 0;
+      color: #4a5568;
+    }
+
     /* 頁尾 */
     footer {
       text-align: center;
@@ -140,14 +219,18 @@
   </header>
 
   <div class="container">
-    <section id="portfolio">
-      <h2>作品目錄</h2>
-      
+    
+    <div class="tab-menu">
+      <button class="tab-btn active" data-target="portfolio">作品目錄</button>
+      <button class="tab-btn" data-target="experience">個人經歷</button>
+    </div>
+
+    <section id="portfolio" class="tab-content active">
       <div class="portfolio-grid">
         
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱</h3>
+            <h3>專案名稱 A</h3>
             <div class="tags">
               <span class="tag">Python</span>
               <span class="tag">Docker</span>
@@ -160,7 +243,7 @@
 
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱</h3>
+            <h3>專案名稱 B</h3>
             <div class="tags">
               <span class="tag">C++</span>
               <span class="tag">資料構造</span>
@@ -172,7 +255,7 @@
 
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱</h3>
+            <h3>專案名稱 C</h3>
             <div class="tags">
               <span class="tag">前端技術</span>
               <span class="tag">GitHub Pages</span>
@@ -184,7 +267,7 @@
 
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱</h3>
+            <h3>專案名稱 D</h3>
             <div class="tags">
               <span class="tag">Python</span>
               <span class="tag">大數據處理</span>
@@ -193,13 +276,57 @@
             <a href="#" class="btn">查看 GitHub 原始碼 →</a>
           </div>
         </div>
+
       </div>
     </section>
+
+    <section id="experience" class="tab-content">
+      <div class="timeline">
+        
+        <div class="timeline-item">
+          <div class="time">2025 - 至今</div>
+          <div class="timeline-content">
+            <h3>某某科技公司 / 軟體工程實習生</h3>
+            <p>負責參與後端 API 開發與維護，並運用 Docker 容器化技術優化本機開發流程。在實習期間協助導入自動化腳本，提升團隊資料處理效率。</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time">2022 - 2026</div>
+          <div class="timeline-content">
+            <h3>OO 大學 / 資訊工程學系</h3>
+            <p>專攻軟體工程與自動化基礎建設。在校期間曾參與多項專題研究，熟悉 C/C++ 演算法實作、Linux 系統操作及基礎 DevOps 工具鏈。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </div>
 
   <footer>
     <p>© 2026 吳國鋒. Built with HTML & CSS.</p>
   </footer>
+
+  <script>
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // 1. 移除所有按鈕的 active 狀態
+        tabBtns.forEach(b => b.classList.remove('active'));
+        // 2. 隱藏所有內容區塊
+        tabContents.forEach(c => c.classList.remove('active'));
+
+        // 3. 為當前點擊的按鈕加上 active
+        btn.classList.add('active');
+        // 4. 顯示對應的內容區塊
+        const targetId = btn.getAttribute('data-target');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
