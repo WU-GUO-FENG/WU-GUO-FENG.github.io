@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>吳國鋒 | 個人作品集</title>
+  <title>Andy Wu | Portfolio</title>
   <style>
-    /* 全局樣式設定 */
+    /* Global Styles */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
@@ -15,7 +15,7 @@
       padding: 0;
     }
 
-    /* 頂部歡迎區塊 (Hero Section) */
+    /* Hero Section */
     header {
       background: linear-gradient(135deg, #24292e 0%, #4c51bf 100%);
       color: #fff;
@@ -33,16 +33,14 @@
       opacity: 0.9;
     }
 
-    /* 主要內容容器 */
+    /* Main Container */
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 2rem 1rem 4rem 1rem;
     }
 
-    /* ==========================================
-       🆕 切換標籤選單樣式 (Tabs Menu)
-       ========================================== */
+    /* Tabs Menu Styles */
     .tab-menu {
       display: flex;
       justify-content: center;
@@ -65,7 +63,7 @@
     .tab-btn:hover {
       color: #4c51bf;
     }
-    /* 當前選中的標籤樣式 */
+    /* Active Tab Style */
     .tab-btn.active {
       color: #4c51bf;
     }
@@ -79,15 +77,13 @@
       background-color: #4c51bf;
     }
 
-    /* ==========================================
-       🆕 內容區塊顯示控制 (Content Control)
-       ========================================== */
+    /* Content Visibility Control */
     .tab-content {
-      display: none; /* 預設全部隱藏 */
+      display: none;
       animation: fadeIn 0.5s ease;
     }
     .tab-content.active {
-      display: block; /* 只有 active 的會顯示 */
+      display: block;
     }
 
     @keyframes fadeIn {
@@ -95,16 +91,14 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ==========================================
-       作品集網格佈局
-       ========================================== */
+    /* Portfolio Grid Layout */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
 
-    /* 單個作品卡片樣式 */
+    /* Portfolio Card Styles */
     .portfolio-card {
       background: #fff;
       border-radius: 8px;
@@ -119,7 +113,7 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* 作品內容敘述 */
+    /* Card Content */
     .card-content {
       padding: 1.5rem;
       flex-grow: 1;
@@ -134,7 +128,7 @@
       font-size: 0.95rem;
     }
 
-    /* 技術標籤 */
+    /* Tech Tags */
     .tags {
       margin-bottom: 1rem;
     }
@@ -149,7 +143,7 @@
       margin-bottom: 0.4rem;
     }
 
-    /* 作品連結按鈕 */
+    /* Action Button */
     .btn {
       display: inline-block;
       color: #4c51bf;
@@ -161,9 +155,7 @@
       text-decoration: underline;
     }
 
-    /* ==========================================
-       🆕 個人經歷樣式 (Timeline / Experience)
-       ========================================== */
+    /* Timeline / Experience Styles */
     .timeline {
       max-width: 800px;
       margin: 0 auto;
@@ -200,7 +192,7 @@
       color: #4a5568;
     }
 
-    /* 頁尾 */
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem 1rem;
@@ -214,15 +206,15 @@
 <body>
 
   <header>
-    <h1>你好，我是吳國鋒</h1>
-    <p>歡迎來到我的個人網站 | 專注於軟體開發與技術探索</p>
+    <h1>Hello, I'm Andy Wu</h1>
+    <p>Welcome to my Portfolio | Passionate about Software Engineering & Automation Infrastructure</p>
   </header>
 
   <div class="container">
     
     <div class="tab-menu">
-      <button class="tab-btn active" data-target="portfolio">作品目錄</button>
-      <button class="tab-btn" data-target="experience">個人經歷</button>
+      <button class="tab-btn active" data-target="portfolio">Projects</button>
+      <button class="tab-btn" data-target="experience">Experience</button>
     </div>
 
     <section id="portfolio" class="tab-content active">
@@ -230,50 +222,56 @@
         
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱 A</h3>
+            <h3>AI Travel Assistant</h3>
             <div class="tags">
               <span class="tag">Python</span>
-              <span class="tag">Docker</span>
-              <span class="tag">CI/CD</span>
+              <span class="tag">Gemini API</span>
+              <span class="tag">Google Maps API</span>
+              <span class="tag">OpenWeather API</span>
             </div>
-            <p>簡短描述這個專案解決了什麼問題、使用了什麼技術。例如：這是一個自動化資料處理工具，整合了 GitHub Actions 進行自動化測試與部署。</p>
-            <a href="https://github.com/" target="_blank" class="btn">查看 GitHub 原始碼 →</a>
+            <p>A multimodal AI-driven smart concierge web application integrating spatial GIS services. Features automated landmark recognition, historical/cultural audio guides, neighborhood queries, and real-time contextual weather analysis.</p>
+            <a href="https://github.com/" target="_blank" class="btn">View on GitHub →</a>
           </div>
         </div>
 
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱 B</h3>
+            <h3>CSV Mini Database Engine</h3>
             <div class="tags">
-              <span class="tag">C++</span>
-              <span class="tag">資料構造</span>
+              <span class="tag">C++17</span>
+              <span class="tag">CMake</span>
+              <span class="tag">Google Test</span>
+              <span class="tag">CI/CD</span>            
             </div>
-            <p>描述第二個專案的核心功能。例如：獨立實作的高效能雜湊表與基礎資料結構，並進行了嚴謹的記憶體與效能優化測試。</p>
-            <a href="https://github.com/" target="_blank" class="btn">查看 GitHub 原始碼 →</a>
+            <p>Engineered a type-safe, from-scratch In-Memory DB system. Developed a robust Finite State Machine (FSM) parser to handle complex CSV anomalies, implemented a Fluent API for query chaining, and optimized query execution paths with $O(1)$ Hash Indexes.</p>
+            <a href="https://github.com/WU-GUO-FENG/11402_CS351_ProjectB" target="_blank" class="btn">View on GitHub →</a>
           </div>
         </div>
 
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱 C</h3>
+            <h3>Linux Infrastructure Automation</h3>
             <div class="tags">
-              <span class="tag">前端技術</span>
-              <span class="tag">GitHub Pages</span>
+              <span class="tag">Shell Script</span>
+              <span class="tag">Linux/Ubuntu</span>
+              <span class="tag">Git</span>
             </div>
-            <p>描述第三個專案。可以是實習期間的成果摘要、課程專題或是任何你引以為傲的自動化腳本。</p>
-            <a href="#" class="btn">查看 GitHub 原始碼 →</a>
+            <p>Developed shell scripts and cron automation pipelines for server maintenance and deployment logs processing. Optimized backup schemes, configuration setups, and log parsing efficiencies on OpenStack and localized Linux instances.</p>
+            <a href="#" class="btn">View on GitHub →</a>
           </div>
         </div>
 
         <div class="portfolio-card">
           <div class="card-content">
-            <h3>專案名稱 D</h3>
+            <h3>Big Data Analysis & Machine Learning</h3>
             <div class="tags">
               <span class="tag">Python</span>
-              <span class="tag">大數據處理</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Seaborn</span>
             </div>
-            <p>下載網路上的資料集，對於資料進行模型預測以及趨勢分析</p>
-            <a href="#" class="btn">查看 GitHub 原始碼 →</a>
+            <p>Conducted multi-dimensional Exploratory Data Analysis (EDA) to evaluate intertwined impacts across metrics. Leveraged a Random Forest Regression model to predict hourly numerical trends with high statistical accuracy.</p>
+            <a href="#" class="btn">View on GitHub →</a>
           </div>
         </div>
 
@@ -284,22 +282,24 @@
       <div class="timeline">
         
         <div class="timeline-item">
-          <div class="time">2025/1月 - 2026/1月</div>
+          <div class="time">Jan 2025 - Jan 2026</div>
           <div class="timeline-content">
-            <h3>鋐泰汽車零件股份有限公司 / IT實習生</h3>
-              <p>
-                <strong>【基礎建設維護】</strong>管理與維護企業內部電子設備及機房運作，確保系統高可用性。<br>
-                <strong>【自動化與資料處理】</strong>運用 Python 整合 SQL 資料庫開發自動化腳本，優化業務資料處理流程，顯著提升公司跨部門行政與營運效率。<br>
-                <strong>【資安事件應變】</strong>於任職期間遭遇勒索病毒入侵事件，迅速啟動危機應變，與外部專業資安團隊緊密協調合作，成功控制災情並推進系統復原。
-              </p>
+            <h3>IT Engineering Intern</h3>
+            <p style="font-style: italic; color: #718096; margin-bottom: 0.5rem;">Hong Tai Auto Parts Co., Ltd.</p>
+            <p>
+              • <strong>Infrastructure Maintenance:</strong> Managed and sustained corporate internal electronic equipment, local networks, and server room operations, ensuring high availability.<br>
+              • <strong>Automation & Data Operations:</strong> Designed and deployed Python automation scripts integrated with SQL databases, streamlining data flows and improving cross-departmental administrative velocity.<br>
+              • <strong>Incident Response:</strong> Acted swiftly during a major ransomware breach; closely coordinated with external cybersecurity response teams to effectively contain the payload and restore critical systems safely.
+            </p>
           </div>
         </div>
 
         <div class="timeline-item">
           <div class="time">2022 - 2026</div>
           <div class="timeline-content">
-            <h3>元智大學 / 資訊工程學系</h3>
-            <p>專攻軟體工程與自動化基礎建設。在校期間曾實作多項專題報告，熟悉 C/C++ 演算法實作、Python、Linux 系統操作及基礎 DevOps 工具鏈、能夠運用多種開放平台工具幫助實作。</p>
+            <h3>B.S. in Computer Science and Engineering</h3>
+            <p style="font-style: italic; color: #718096; margin-bottom: 0.5rem;">Yuan Ze University</p>
+            <p>Focused on Software Engineering, Data Structures, and Automation Infrastructure. Developed multiple core terminal projects including hands-on experience in C/C++ algorithms, system level programming, Linux administration, and foundational DevOps workflows.</p>
           </div>
         </div>
 
@@ -309,7 +309,7 @@
   </div>
 
   <footer>
-    <p>© 2026 吳國鋒. Built with HTML & CSS.</p>
+    <p>© 2026 Andy Wu. Built with HTML & CSS.</p>
   </footer>
 
   <script>
@@ -318,19 +318,18 @@
 
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // 1. 移除所有按鈕的 active 狀態
+        // 1. Remove active state from all buttons
         tabBtns.forEach(b => b.classList.remove('active'));
-        // 2. 隱藏所有內容區塊
+        // 2. Hide all tab contents
         tabContents.forEach(c => c.classList.remove('active'));
 
-        // 3. 為當前點擊的按鈕加上 active
+        // 3. Add active state to clicked button
         btn.classList.add('active');
-        // 4. 顯示對應的內容區塊
+        // 4. Show corresponding content panel
         const targetId = btn.getAttribute('data-target');
         document.getElementById(targetId).classList.add('active');
       });
     });
   </script>
-
 </body>
 </html>
