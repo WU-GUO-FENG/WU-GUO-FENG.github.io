@@ -7,7 +7,7 @@
 ## 📅 作業明細 (Assignment Directory)
 
 | 作業名稱 (Assignment Name) | 核心技術棧 | 狀態 (Status) |
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- |
 
 
 ---
