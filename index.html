@@ -213,10 +213,95 @@
   <div class="container">
     
     <div class="tab-menu">
+      <button class="tab-btn active" data-target="about">About Me</button>
       <button class="tab-btn active" data-target="portfolio">Projects</button>
       <button class="tab-btn" data-target="experience">Experience</button>
     </div>
 
+    <section id="about" class="tab-content active">
+  <style>
+    /* 專屬於 About Me 區塊的排版樣式 */
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .about-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    .about-text h2, .skills-summary h2 {
+      color: #1a202c;
+      margin-top: 0;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+    .about-text p {
+      color: #4a5568;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+    .skill-category {
+      margin-bottom: 1.5rem;
+    }
+    .skill-category h4 {
+      margin: 0 0 0.5rem 0;
+      color: #4c51bf;
+      font-size: 1rem;
+    }
+  </style>
+
+  <div class="about-wrapper">
+    <div class="about-text">
+      <h2>Who I Am</h2>
+      <p>
+        Hello! I am a passionate **Computer Science and Engineering** undergraduate student at Yuan Ze University, graduating in 2026. My core expertise lies in **software engineering, systems programming, and backend automation**.
+      </p>
+      <p>
+        I have a strong affinity for low-level systems and robust software design, which drove me to build a high-performance in-memory database engine from scratch in C++17. Beyond academic specialized courses, I have proven professional capabilities through a year-long **IT Engineering Internship**, where I spearheaded business automation toolchains and co-managed incident responses during security critical events.
+      </p>
+      <p>
+        I thrive in fast-paced environments, love breaking down complex algorithmic barriers, and am deeply invested in bridging the gap between solid software architectures and scalable automated infrastructures (DevOps).
+      </p>
+    </div>
+
+    <div class="skills-summary">
+      <h2>Skills Summary</h2>
+      
+      <div class="skill-category">
+        <h4>Languages</h4>
+        <div class="tags">
+          <span class="tag" style="background-color: #ebf8ff; color: #2b6cb0;">C / C++ (C++17)</span>
+          <span class="tag" style="background-color: #ebf8ff; color: #2b6cb0;">Python</span>
+          <span class="tag" style="background-color: #ebf8ff; color: #2b6cb0;">Bash Shell</span>
+          <span class="tag" style="background-color: #ebf8ff; color: #2b6cb0;">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h4>DevOps & CI/CD</h4>
+          <div class="tags">
+            <span class="tag" style="background-color: #f0fff4; color: #276749;">Git / GitHub</span>
+            <span class="tag" style="background-color: #f0fff4; color: #276749;">GitHub Actions</span>
+            <span class="tag" style="background-color: #f0fff4; color: #276749;">Docker</span>
+            <span class="tag" style="background-color: #f0fff4; color: #276749;">CMake</span>
+          </div>
+        </div>
+  
+        <div class="skill-category">
+          <h4>Infrastructure & Software</h4>
+          <div class="tags">
+            <span class="tag" style="background-color: #fffaf0; color: #9c4221;">Linux (Ubuntu)</span>
+            <span class="tag" style="background-color: #fffaf0; color: #9c4221;">Google Test</span>
+            <span class="tag" style="background-color: #fffaf0; color: #9c4221;">OpenStack / MicroStack</span>
+            <span class="tag" style="background-color: #fffaf0; color: #9c4221;">Relational Databases</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
     <section id="portfolio" class="tab-content active">
       <div class="portfolio-grid">
         
